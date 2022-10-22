@@ -1,8 +1,10 @@
 from flask import Flask, render_template
 
+from model import db
+
 app = Flask(__name__)
-
-
+app.config.from_pyfile('config.py', silent=True)
+db.init_app(app)
 @app.route('/')
 def main_page():
     title = 'Beaver_knithen: главная страница'
