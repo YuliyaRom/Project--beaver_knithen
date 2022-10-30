@@ -19,5 +19,3 @@ class Product(db.Model):
         return f"Product {self.id}, {self.Name}, {self.Category}"
 
 
-if __name__ == "__main__":
-    Base.metadata.create_all(bind=engine)
